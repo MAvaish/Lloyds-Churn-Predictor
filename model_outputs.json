@@ -1,0 +1,146 @@
+{
+  "data_quality": {
+    "dtype": {
+      "CustomerID": "int64",
+      "Age": "int64",
+      "Gender": "object",
+      "MaritalStatus": "object",
+      "IncomeLevel": "object"
+    },
+    "missing_values": {
+      "CustomerID": "0",
+      "Age": "0",
+      "Gender": "0",
+      "MaritalStatus": "0",
+      "IncomeLevel": "0"
+    },
+    "unique_values": {
+      "CustomerID": "1000",
+      "Age": "52",
+      "Gender": "2",
+      "MaritalStatus": "4",
+      "IncomeLevel": "3"
+    },
+    "sample_values": {
+      "CustomerID": [
+        1,
+        2,
+        3
+      ],
+      "Age": [
+        62,
+        65,
+        18
+      ],
+      "Gender": [
+        "M",
+        "F"
+      ],
+      "MaritalStatus": [
+        "Single",
+        "Married",
+        "Widowed"
+      ],
+      "IncomeLevel": [
+        "Low",
+        "Medium",
+        "High"
+      ]
+    }
+  },
+  "model_performance": {
+    "classification_report": {
+      "0": {
+        "precision": 0.7777777777777778,
+        "recall": 0.8253275109170306,
+        "f1-score": 0.8008474576271186,
+        "support": 229.0
+      },
+      "1": {
+        "precision": 0.2982456140350877,
+        "recall": 0.23943661971830985,
+        "f1-score": 0.265625,
+        "support": 71.0
+      },
+      "accuracy": 0.6866666666666666,
+      "macro avg": {
+        "precision": 0.5380116959064327,
+        "recall": 0.5323820653176702,
+        "f1-score": 0.5332362288135593,
+        "support": 300.0
+      },
+      "weighted avg": {
+        "precision": 0.6642884990253412,
+        "recall": 0.6866666666666666,
+        "f1-score": 0.6741781426553672,
+        "support": 300.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        189,
+        40
+      ],
+      [
+        54,
+        17
+      ]
+    ],
+    "roc_auc": 0.549388031244234,
+    "best_params": {
+      "max_depth": null,
+      "min_samples_split": 5,
+      "n_estimators": 200
+    },
+    "feature_importances": {
+      "Age": 0.3922834499984603,
+      "Is_Young": 0.03412527239431541,
+      "Is_Senior": 0.018837466180568432,
+      "IncomeLevel_encoded": 0.04598962213884218,
+      "High_Risk": 0.01702459664442802,
+      "Gender_F": 0.06524923955574187,
+      "Gender_M": 0.06979109613733582,
+      "MaritalStatus_Divorced": 0.06308973767246989,
+      "MaritalStatus_Married": 0.056967874082620856,
+      "MaritalStatus_Single": 0.06129328039795587,
+      "MaritalStatus_Widowed": 0.06787955388038497,
+      "IncomeLevel_High": 0.030170226350481315,
+      "IncomeLevel_Low": 0.03728188972219479,
+      "IncomeLevel_Medium": 0.0400166948442002
+    }
+  },
+  "business_insights": {
+    "top_5_features": [
+      {
+        "feature": "Age",
+        "importance": 0.3922834499984603
+      },
+      {
+        "feature": "Gender_M",
+        "importance": 0.06979109613733582
+      },
+      {
+        "feature": "MaritalStatus_Widowed",
+        "importance": 0.06787955388038497
+      },
+      {
+        "feature": "Gender_F",
+        "importance": 0.06524923955574187
+      },
+      {
+        "feature": "MaritalStatus_Divorced",
+        "importance": 0.06308973767246989
+      }
+    ],
+    "high_risk_segments": {
+      "(0, 'High')": 0.13307984790874525,
+      "(0, 'Low')": 0.24279835390946503,
+      "(0, 'Medium')": 0.172,
+      "(1, 'High')": 0.36046511627906974,
+      "(1, 'Low')": 0.5487804878048781,
+      "(1, 'Medium')": 0.32894736842105265
+    },
+    "model_recall": 0.23943661971830985,
+    "model_precision": 0.2982456140350877
+  }
+}
